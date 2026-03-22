@@ -217,7 +217,7 @@ void Manager::init_entity(EntityBase *entity, const REG_DEF *reg_def, const char
       name = strdup(reg_name_buf);
     }
   }
-  entity->configure_entity_(name);
+  entity->configure_entity_(name,0,0);
 }
 
 #if defined(VEDIRECT_USE_HEXFRAME)

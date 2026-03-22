@@ -60,7 +60,6 @@ void Sensor::init_reg_def_() {
 #endif
   switch (reg_def->cls) {
     case REG_DEF::CLASS::NUMERIC:
-      this->configure_entity_(nullptr, 0, REG_DEF::UNITS[reg_def->unit],UNIT_TO_DEVICE_CLASS[reg_def->unit]);
       this->set_state_class(UNIT_TO_STATE_CLASS[reg_def->unit]);
       this->set_accuracy_decimals(SCALE_TO_DIGITS[reg_def->scale]);
       this->hex_scale_ = REG_DEF::SCALE_TO_SCALE[reg_def->scale];

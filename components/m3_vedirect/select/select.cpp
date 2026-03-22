@@ -81,7 +81,7 @@ void Select::parse_string_(const char *string_value) {
   // This code is a bit useless since there's no point in managing Select entities
   // that are not ENUM in VEDirect context...but let's keep it for the sake of
   // completeness.
-#if ESPHOME_VERSION_CODE >= VERSION_CODE(2025, 11, 0)
+/*#if ESPHOME_VERSION_CODE >= VERSION_CODE(2025, 11, 0)
   if (strcmp(this->current_option(), string_value)) {
     auto index = this->index_of(string_value);
     if (index.has_value()) {
@@ -108,7 +108,7 @@ void Select::parse_string_(const char *string_value) {
     }
     this->publish_index_(index);
   }
-#endif
+#endif*/
 }
 
 #if defined(VEDIRECT_USE_HEXFRAME)
